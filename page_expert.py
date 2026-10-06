@@ -636,17 +636,17 @@ with tabs[5]:
                                      default=["ADG_g", "FCR", "RFI"])
         c1, c2, c3 = st.columns(3)
         with c1:
-            w_adg = st.number_input("ADG 权重", 0.33, min_value=0.0, max_value=1.0, step=0.05)
+            w_adg = st.number_input("ADG 权重", value=0.33, min_value=0.0, max_value=1.0, step=0.05)
         with c2:
-            w_fcr = st.number_input("FCR 权重", 0.33, min_value=0.0, max_value=1.0, step=0.05)
+            w_fcr = st.number_input("FCR 权重", value=0.33, min_value=0.0, max_value=1.0, step=0.05)
         with c3:
-            w_rfi = st.number_input("RFI 权重", 0.34, min_value=0.0, max_value=1.0, step=0.05)
+            w_rfi = st.number_input("RFI 权重", value=0.34, min_value=0.0, max_value=1.0, step=0.05)
 
         c1, c2 = st.columns(2)
         with c1:
-            w_imp = st.number_input("重要性得分权重", 0.7, min_value=0.0, max_value=1.0, step=0.05)
+            w_imp = st.number_input("重要性得分权重", value=0.7, min_value=0.0, max_value=1.0, step=0.05)
         with c2:
-            w_stab = st.number_input("稳定性得分权重", 0.3, min_value=0.0, max_value=1.0, step=0.05)
+            w_stab = st.number_input("稳定性得分权重", value=0.3, min_value=0.0, max_value=1.0, step=0.05)
 
         if st.button("运行 AI 智能选种分析", type="primary", use_container_width=True):
             try:
