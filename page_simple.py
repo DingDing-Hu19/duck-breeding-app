@@ -182,7 +182,8 @@ with tabs[2]:
                       color="Week_Number", markers=True,
                       color_discrete_sequence=PAL_RPBG * 5)
         fig.update_xaxes(tickmode="array", tickvals=list(range(24)))
-        fig.update_layout(xaxis_title="时刻 (h)", yaxis_title="平均访问次数/只", color="周次")
+        # ⚠️ color 不能放在 update_layout 里，已删除
+        fig.update_layout(xaxis_title="时刻 (h)", yaxis_title="平均访饲次数/只")
         render_plotly(fig, "simple_hourly_plot")
 
     st.subheader("昼夜分配")
